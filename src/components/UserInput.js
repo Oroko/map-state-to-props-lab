@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
+
 class UserInput extends Component {
 
   state = {
@@ -21,6 +22,7 @@ class UserInput extends Component {
 
   render() {
     return(
+      
       <form onSubmit={this.handleOnSubmit}>
         <p>
           <input
@@ -40,8 +42,15 @@ class UserInput extends Component {
         </p>
         <input type="submit" />
       </form>
+      
+      
+      
     )
   }
 }
+
+// const mapStateToProps = (state) => {
+//   return {users : state.users}
+// }
 
 export default connect()(UserInput);
